@@ -12,7 +12,7 @@ public class Sort0s1s2s {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
             }
-        //display arr2
+        
         System.out.println("Sorted array is: ");
         for (int i = 0; i < arr2.length; i++) {
             System.out.print(arr2[i] + " ");

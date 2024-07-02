@@ -1,6 +1,5 @@
 /* LeetCode 1. Two Sum */
 
-
 public class TwoSum {
     public static void main(String[] args) {
         int[] nums = {2,7,11,15,22,6,10,5};

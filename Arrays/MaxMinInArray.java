@@ -1,10 +1,6 @@
 /* This code contains two functions which will help you to calculate
  the maximum and the minimum element in the Java */
-
-
-
 import java.util.Scanner;
-
 class MaxMinInArray{
 
     public static int findMax(int arr[]){

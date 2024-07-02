@@ -1,4 +1,4 @@
-/* This file contains the code for reversing the array in-place. */
+/* This file contains the code for reversing the array in-place.*/
 
 public class ReverseArray {
     public static void main(String[] args) {

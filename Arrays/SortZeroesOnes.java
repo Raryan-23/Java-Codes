@@ -1,5 +1,6 @@
 /* Sorting the array containg 0s and 1s. */
 /*This is a two pass approach! */
+
 public class SortZeroesOnes {
     public static void main(String[] args) {
         int[] arr = {0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1};

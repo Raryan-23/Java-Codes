@@ -1,11 +1,13 @@
+// ArrayList is a dynamic array
+// ArrayList is a part of collection framework
+// ArrayList is a class in java.util package
+// ArrayList is a resizable array
+
 import java.util.ArrayList;
 
 public class BasicsOfArrayList {
     public static void main(String[] args) {
-        // ArrayList is a dynamic array
-        // ArrayList is a part of collection framework
-        // ArrayList is a class in java.util package
-        // ArrayList is a resizable array
+       
         ArrayList<Integer> arr= new ArrayList<>();
         arr.add(10);
         arr.add(20);
