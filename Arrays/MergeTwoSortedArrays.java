@@ -10,13 +10,16 @@ class MergeTwoSortedArrays{
             if(arr1[i]<arr2[j]){
                 arr3[k] = arr1[i];
                 i++;
-                k++;
+                
             }else{
                 arr3[k] = arr2[j];
                 j++;
+                
+                }
                 k++;
                 }
-                }
+                
+        // This is to fill out the remaning elements of the array when one iterator gets over.
             while(i<n){
                 arr3[k] = arr1[i];
                 i++;
