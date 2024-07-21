@@ -20,5 +20,6 @@ public class BasicOfString {
         String s3 = new String(str);
         System.out.println();
         System.out.print(s3);
+        
     }
 }
