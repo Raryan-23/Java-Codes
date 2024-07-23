@@ -16,5 +16,6 @@ public class StringBuilderFunctions {
         System.out.println(sb.compareTo(tb));
         System.out.println(sb.charAt(3));
         System.out.println(sb.isEmpty());
+        System.out.println(sb.reverse());
     }
 }
