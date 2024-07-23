@@ -1,0 +1,84 @@
+Q1. Why Array Length is .length and String Length is .length() in Java?
+
+
+Great question! This seemingly minor difference in syntax actually reflects fundamental distinctions between arrays and strings in Java.
+
+Arrays: Primitive Data Structures
+Direct Access to Length: Arrays in Java are essentially fixed-size containers for holding elements of the same data type. Their length is determined at creation and cannot be changed. Because of this static nature, the length information is stored directly within the array object as a public final field named length.
+Efficiency: Directly accessing length as a field is more efficient than calling a method, especially in performance-critical scenarios.
+Strings: Objects with Methods
+Method for Flexibility: Strings, on the other hand, are objects in Java. While they internally represent characters as a character array, the length() method provides a more flexible and object-oriented way to determine the string length.
+Potential for Modification: Unlike arrays, strings can be manipulated through various methods, and their length can change dynamically. Using a method to retrieve the length ensures consistency and allows for potential future changes in how string length is calculated.
+In summary:
+
+Arrays: .length is a direct access to a fixed-size property.
+Strings: .length() is a method call for a potentially dynamic property.
+This distinction aligns with the overall design philosophy of Java, where arrays are treated as more primitive constructs, while strings are full-fledged objects with methods for various operations.
+
+In Java, the length of an array is obtained by using the .length property. For example,
+int[] arr = {1, 2, 3, 4, 5};
+System.out.println(arr.length);
+The length of a string is obtained by using the .length() method. For example,
+String str = "Hello World!";
+System.out.println(str.length());
+
+
+Q2. What is address in java referred to ?
+
+Addresses in Java: A Subtle Difference
+In Java, you don't directly manipulate memory addresses like you would in languages like C or C++. This is a key difference that contributes to Java's safety and garbage collection.
+
+Instead of addresses, Java uses references. A reference is essentially a variable that holds a pointer to an object's location in memory. While you can't directly access the raw memory address, the reference allows you to interact with the object.
+
+Key points to remember:
+No direct address manipulation: Java handles memory management automatically.
+References: These are used to access objects indirectly.
+Garbage collection: Java automatically reclaims memory when objects are no longer referenced.
+Example:
+
+
+String name = "Alice";
+
+Here, name is a reference to a String object. You can use name to access the string's methods and properties, but you don't know or care about its exact memory location.
+
+While there are some advanced mechanisms like MemoryAddress introduced in Java 17, they are primarily for low-level operations and aren't typically used in everyday programming.
+
+Q3. What is the difference between .equals() and == in terms of primitive data types and strings in java?
+
+
+Difference between == and .equals() in Java
+For Primitive Data Types
+== operator compares the actual values of the primitive data types.
+There is no .equals() method for primitive data types.
+Example:
+
+Java
+int x = 5;
+int y = 5;
+boolean result = (x == y); // This will be true because both x and y have the value 5
+
+For Strings
+== operator compares the references of the String objects, not their contents. It checks if both references point to the same object in memory.
+.equals() method compares the actual contents of the String objects. It checks if the characters in both strings are the same.
+Example:
+
+Java
+String s1 = "hello";
+String s2 = "hello";
+String s3 = new String("hello");
+
+boolean result1 = (s1 == s2); // This might be true or false depending on JVM optimization
+boolean result2 = (s1 == s3); // This will definitely be false
+boolean result3 = s1.equals(s2); // This will be true
+boolean result4 = s1.equals(s3); // This will also be true
+
+Key points to remember:
+
+For primitive data types, == is always used to compare values.
+For Strings, == compares references, while .equals() compares content.
+It's generally recommended to use .equals() for String comparisons to avoid unexpected behavior.
+In summary:
+
+Operator	                Comparison	                                                     Data Type
+   ==	            Compares references (for objects) or values (for primitives)	            Both
+.equals()	        Compares contents of objects	                                            Objects
