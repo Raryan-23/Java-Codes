@@ -13,7 +13,9 @@ public static void main(String[] args) {
     stack.push(5);
     System.out.println("Original Stack: " + stack);
     while (!stack.isEmpty()) {
+        System.out.println(stack.peek());
         stack_rev.push(stack.pop());
+        System.out.println("Stack after popping: " + stack);
     }
     System.out.println("Reversed Stack: " + stack_rev);
     }
