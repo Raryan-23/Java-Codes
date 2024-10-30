@@ -12,7 +12,7 @@ public class ReverseStackRecursive {
     stack.push(5);
     System.out.println("Original Stack: " + stack);
     revStack(stack);
-    System.out.println("Reversed Stack: " + stack);
+    System.out.println("Stack restored: " + stack);
     }
 
     public static void revStack(Stack<Integer> st){
@@ -22,5 +22,6 @@ public class ReverseStackRecursive {
         int temp = st.pop();
         System.out.println(temp);
         revStack(st);
+        st.push(temp);
     }
 }
